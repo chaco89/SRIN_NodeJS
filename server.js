@@ -5,9 +5,17 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const port = 8080;
-const DB_NAME = "db_daniel";
 
+/*
+// using localhost db
+const DB_NAME = "db_daniel";
 mongoose.connect('mongodb://localhost:27017/'+DB_NAME);
+*/
+
+
+// using cloud db
+const connectionString = "mongodb+srv://db_daniel:pnp8PLEzhDYoKoMb@dbdaniel.25utq0h.mongodb.net/?retryWrites=true&w=majority";
+mongoose.connect(connectionString);
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
