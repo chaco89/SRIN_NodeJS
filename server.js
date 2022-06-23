@@ -20,4 +20,4 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(route);
 
-app.listen(port, () => console.log('Hello world app listening on port %d', port))
+app.listen(port, () => console.log('server app listening on port %d', port))
