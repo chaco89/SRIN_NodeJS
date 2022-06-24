@@ -6,12 +6,8 @@ const cors = require('cors');
 const app = express();
 const port = 8080;
 
-/*
-// using localhost db
-const DB_NAME = "db_daniel";
-mongoose.connect('mongodb://localhost:27017/'+DB_NAME);
-*/
-
+// using local
+// const connectionString = "mongodb://localhost:27017/db_daniel";
 
 // using cloud db
 const connectionString = "mongodb+srv://db_daniel:pnp8PLEzhDYoKoMb@dbdaniel.25utq0h.mongodb.net/?retryWrites=true&w=majority";
